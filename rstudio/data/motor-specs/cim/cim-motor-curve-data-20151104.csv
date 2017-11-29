@@ -1,4 +1,4 @@
-Speed (RPM),Torque (N·m),Current (A),Supplied Power (W),Output Power (W),Efficiency (%),Power Dissipation (W)
+speed,torque,current,power-in,power-out,efficiency,power-lost
 0,2.413,131.055,1572.66,0,0,1572.66
 53.3,2.38887,129.771,1557.252,13.334,0.856,1543.918
 106.6,2.36474,128.488,1541.856,26.398,1.712,1515.458
