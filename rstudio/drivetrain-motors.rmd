@@ -11,13 +11,29 @@ abstract: "This experiment aims to collect real-world performance data from vari
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(lattice)
+library("ggplot2")
 cim <- read.csv("./data/motor-specs/cim/cim-motor-curve-data-20151104.csv", header = TRUE)
 ```
 
 # Background Information
 
 ```{r}
-plot(cim$speed, cim$torque, type="l", col="gold")
+plot(cim$speed, cim$torque, type="l", col="gold",
+     ylim=range(c(0, 3.5)), xlab="RPM", ylab="Torque")
+
+par(new=TRUE)
+plot(cim$speed, cim$efficiency, type="l", col="red",
+     ylim=range(c(0, 100)), axes=FALSE, xlab="", ylab="")
+#axis(side=2, line=2, at=seq(0,100,by=10)) #TODO fix this display
+#mtext("Efficiency", side = 2, line=3.5) #off the left margin...can't set fig.width, need to shrink plot itself
+
+par(new=TRUE)
+plot(cim$speed, cim$current, type="l", col="blue",
+     ylim=range(c(0, 350)), axes=FALSE, xlab="", ylab="")
+
+# TODO legend
+# TODO other data sets
+# TODO label peak points
 ```
 
 # Literature Review
