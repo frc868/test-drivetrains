@@ -10,8 +10,14 @@ abstract: "This experiment aims to collect real-world performance data from vari
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(lattice)
+cim <- read.csv("./data/motor-specs/cim/cim-motor-curve-data-20151104.csv", header = TRUE)
 ```
 
 # Background Information
+
+```{r}
+plot(cim$speed, cim$torque, type="l", col="gold")
+```
 
 # Literature Review
