@@ -1,0 +1,17 @@
+---
+title: "An Experimental Comparison of FRC Drivetrain Motors"
+author: "Caleb Smilth"
+date: "November 28, 2017"
+output: 
+  pdf_document:
+    number_sections: yes
+abstract: "This experiment aims to collect real-world performance data from various combinations of FRC-legal DC motors used in a typical robot drivetrain."
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Background Information
+
+# Literature Review
